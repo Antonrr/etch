@@ -9,6 +9,10 @@ other = "Posts"
 [posts.date]
 other = "Jan 2, 2006"
 
+[projects]
+
+[projects.title]
+other = "Projects"
 
 [post]
 
@@ -17,3 +21,11 @@ other = "Jan 2, 2006"
 
 [post.updated]
 other = "Updated Jan 2, 2006"
+
+[project]
+
+[project.date]
+other = "January 2006"
+
+[project.end]
+other = "January 2006"
