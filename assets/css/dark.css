@@ -33,6 +33,16 @@ main#content hr {
     background: #5c5c5c;
 }
 
+main#content code {
+    background: #303841;
+    border: 1px solid #3c3c3c;
+}
+
+main#content pre {
+    background: #303841;
+    border: 1px solid #3c3c3c;
+}
+
 main#content #toc h4 {
     color: #d4d4d4;
 }
