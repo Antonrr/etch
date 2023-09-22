@@ -1,6 +1,7 @@
 <h3>{{ i18n "projects.title" }}</h3>
+{{ .Content }}
 <ul id="posts">
-{{- range where site.RegularPages "Type" "in" "projects" }}
+{{- range (where site.RegularPages.ByWeight "Type" "==" "projects")}}
     {{ .Render "li" }}
 {{- end }}
 </ul>

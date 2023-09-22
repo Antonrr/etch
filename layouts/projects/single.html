@@ -5,12 +5,11 @@
         <div>
         {{- if isset .Params "date" -}}
             <time>{{ .Date | time.Format (i18n "project.date") }}</time>
-        {{- end -}}
-
-        {{- if isset .Params "end" -}}
-            &ndash;<time>{{ .Params.End | time.Format (i18n "project.end") }}</time>
-        {{- else -}}
-            &ndash;now
+            {{- if isset .Params "end" -}}
+                &ndash;<time>{{ .Params.End | time.Format (i18n "project.end") }}</time>
+            {{- else -}}
+                &ndash;now
+            {{- end -}}
         {{- end -}}
         </div>
     </header>

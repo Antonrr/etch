@@ -1,4 +1,14 @@
 {{ define "main" }}
 {{ .Content }}
-{{- partial "posts.html" . -}}
+
+{{/* posts.html partial without Content variable */}}
+{{ if gt (len (where .Site.RegularPages "Type" "==" "posts")) 0 }}
+<h3>{{ i18n "posts.title" }}</h3>
+<ul id="posts">
+{{- range where site.RegularPages "Type" "==" "posts" }}
+    {{ .Render "li" }}
+{{- end }}
+</ul>
+{{ end }}
+
 {{ end }}

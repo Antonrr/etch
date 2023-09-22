@@ -2,13 +2,15 @@
     <h4>
         <a href="{{ .Permalink }}">
             {{ .Title }}
+            {{- if isset .Params "date" -}}
             <small><time>{{ .Date | time.Format (i18n "project.date") }}</time>
-            {{- if isset .Params "end" -}}
+                {{- if isset .Params "end" -}}
                 &ndash;<time>{{ .Params.End | time.Format (i18n "project.end") }}</time>
-            {{- else -}}
-                &ndash;now
-            {{- end -}}
+                {{- else -}}
+                    &ndash;now
+                {{- end -}}
             </small>
+            {{- end -}}
         </a>
     </h4>
     <span class="content">{{ .Summary }}</span>
